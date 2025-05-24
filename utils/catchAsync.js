@@ -58,6 +58,7 @@ const readTaskAgain = async function () {
   tempTask.splice(0, this.currentActionIndex);
   // 6. Add the newTask & tempTask to create this.task
   this.task = [...newTask, ...tempTask];
+  this.task.taskName = taskName;
   this.task.push({ parentModuleName: "devOrTest", actionName: "endDevFunction" });
 
   return true;
