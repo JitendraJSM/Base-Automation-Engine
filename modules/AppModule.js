@@ -16,12 +16,14 @@ const utils = require("../utils/utils.js");
 
 // === Functions Library Imports ===
 const chrome = require("../functionsLibrary/chrome.js");
+const devOrTest = require("../functionsLibrary/devOrTest.js");
 
 class App {
   constructor() {
     // == functionsLibraries ==
     this.utils = utils;
     this.chrome = chrome;
+    this.devOrTest = devOrTest;
 
     // == Modules ==
     this.monitor = new Monitor();
@@ -63,7 +65,7 @@ class App {
 
     if (process.env.ENVIRONMENT === "development") {
       this.task.push({
-        parentModuleName: "api",
+        parentModuleName: "devOrTest",
         actionName: "endDevFunction",
       });
     }

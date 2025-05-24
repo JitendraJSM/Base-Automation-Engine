@@ -9,5 +9,10 @@
     "actionName": "navigateTo",
     "argumentsString": "https://www.youtube.com",
     "doNotParseArgumentString": true
+  },
+  {
+    "parentModuleName": "devOrTest",
+    "actionName": "consoleLog",
+    "argumentsString": "this.state"
   }
 ]
